@@ -22,18 +22,10 @@ export default function App() {
               <tr key={item.name + index}>
                 <td>{item.name}</td>
                 <td>{item.num}</td>
-                <td>
-                  {item.type?.map((item, index) => {
-                    return <span key={item + index}>{", " + item} </span>;
-                  })}
-                </td>
+                <td>{item.type?.join(", ")}</td>
                 <td>{item.height}</td>
                 <td>{item.weight}</td>
-                <td>
-                  {item.weaknesses?.map((item, index) => {
-                    return <span key={item + index}>{", " + item} </span>;
-                  })}
-                </td>
+                <td>{item.weaknesses?.join(", ")}</td>
                 <td>
                   {item.next_evolution?.map((item) => {
                     return (
